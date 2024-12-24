@@ -47,8 +47,8 @@ else
 fi
 
 # Install Apache2
-info "Installing Apache2..."
-if sudo apt install apache2 -y; then
+info "Installing Apache2 And PHP..."
+if sudo apt install apache2 -y && apt install php -y && apt install php-curl -y; then
     success "Apache2 installed successfully."
 else
     error "Failed to install Apache2."
